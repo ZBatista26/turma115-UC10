@@ -47,6 +47,7 @@ A **FeiraTech** organiza feiras de inovação tecnológica e precisa de uma API 
 - `GET /expositores` — Listar expositores
 - `GET /expositores/:id` — Buscar expositor por ID
 - `DELETE /expositores/:id` — Remover expositor
+- `UPDATE /expositores/:id` — Atualizar expositor
 
 ### Protótipos
 
@@ -55,6 +56,7 @@ A **FeiraTech** organiza feiras de inovação tecnológica e precisa de uma API 
 - `GET /prototipos/:id` — Buscar protótipo por ID
 - `GET /expositores/:id/prototipos` — Listar protótipos de um expositor
 - `DELETE /prototipos/:id` — Remover protótipo
+- `UPDATE /prototipos/:id` — Atualizar protótipo
 
 ---
 
@@ -87,6 +89,7 @@ A **FeiraTech** organiza feiras de inovação tecnológica e precisa de uma API 
 | Buscar expositor por ID existente               | 200    | Dados do expositor                                            |
 | Buscar expositor por ID inexistente             | 404    | Mensagem: "Expositor não encontrado"                          |
 | Deletar expositor existente                     | 200    | Mensagem: "Expositor removido com sucesso"                    |
+| Atualizar expositor existente                   | 201    | Mensagem: "Expositor atualizado com sucesso"                  |
 
 ### Protótipos
 
@@ -100,6 +103,7 @@ A **FeiraTech** organiza feiras de inovação tecnológica e precisa de uma API 
 | Listar protótipos de um expositor               | 200    | Array de protótipos vinculados ao expositor                   |
 | Listar protótipos de expositor inexistente      | 404    | Mensagem: "Expositor não encontrado"                          |
 | Deletar protótipo existente                     | 200    | Mensagem: "Protótipo removido com sucesso"                    |
+| Atualizar protótipo existente                   | 201    | Mensagem: "Protótipo atualizado com sucesso"                  |
 
 ---
 
@@ -128,12 +132,12 @@ feiratech-api/
 │   │       ├── controllers/
 │   │       ├── routes/
 │   │       └── models/
-│   └── app.js
 ├── tests/
 │   ├── expositor.test.js
 │   └── prototipo.test.js
 ├── database/
 │   └── config/
+├── index.js
 
 ```
 
