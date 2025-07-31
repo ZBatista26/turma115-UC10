@@ -1,5 +1,5 @@
 
-# 🧪 Testando com Mocks no Jest (Node.js + Express)
+# 🧪 Testes com Mocks no Jest (Node.js + Express)
 
 ## 📌 O que é um Mock?
 
