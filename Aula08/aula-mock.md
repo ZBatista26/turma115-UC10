@@ -19,10 +19,10 @@ Mocks são úteis para:
 Vamos usar a estrutura MVC com três camadas:
 
 ```
+📁 models/
+  └── usuarioModel.js
 📁 controllers/
   └── usuarioController.js
-📁 services/
-  └── usuarioService.js
 📁 routes/
   └── usuarioRoutes.js
 📁 tests/
