@@ -1,0 +1,458 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ApiLivros",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [],
+  "paths": {
+    "/livro": {
+      "get": {
+        "summary": "Endpoint Sem Título",
+        "deprecated": false,
+        "description": "Endpoint para listar dotos os livros",
+        "tags": [],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "title": "id do livro",
+                      "example": 1
+                    },
+                    "autor": {
+                      "type": "string",
+                      "title": "nome do autor",
+                      "minLength": 3,
+                      "maxLength": 100
+                    },
+                    "titulo": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 100,
+                      "title": "titulo do livro",
+                      "example": "O senhor dos aneis"
+                    },
+                    "ano_pulblicacao": {
+                      "type": "integer",
+                      "example": 2001
+                    },
+                    "genero": {
+                      "type": "string",
+                      "enum": [
+                        "Romance",
+                        "Ficção Científica",
+                        "Fantasia",
+                        "Mistério",
+                        "Suspense",
+                        "Terror",
+                        "Aventura",
+                        "Drama",
+                        "Histórico",
+                        "Biografia",
+                        "Autobiografia",
+                        "Poesia",
+                        "Humor",
+                        "Literatura Clássica",
+                        "Literatura Contemporânea",
+                        "Infantojuvenil",
+                        "Young Adult (YA)",
+                        "Distopia",
+                        "Realismo Mágico",
+                        "Crônicas",
+                        "Ensaios",
+                        "Autoajuda",
+                        "Espiritualidade",
+                        "Religião",
+                        "Filosofia",
+                        "Psicologia",
+                        "Ciências Sociais",
+                        "Política",
+                        "Economia",
+                        "Educação",
+                        "Tecnologia",
+                        "Negócios",
+                        "Direito",
+                        "Medicina",
+                        "Ecologia",
+                        "Viagens",
+                        "Gastronomia",
+                        "Arte",
+                        "Fotografia"
+                      ],
+                      "title": "Genero do livro",
+                      "example": "romance"
+                    },
+                    "preco": {
+                      "type": "number",
+                      "format": "float",
+                      "minimum": 0.1,
+                      "title": "Preço do livro",
+                      "example": 5.5
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "autor",
+                    "titulo",
+                    "ano_pulblicacao",
+                    "genero",
+                    "preco"
+                  ]
+                },
+                "example": {
+                  "id": 1,
+                  "autor": "fugiat",
+                  "titulo": "O senhor dos aneis",
+                  "ano_pulblicacao": 2001,
+                  "genero": "romance",
+                  "preco": 5.5
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      },
+      "post": {
+        "summary": "Endpoint Sem Título",
+        "deprecated": false,
+        "description": "",
+        "tags": [],
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "title": "id do livro",
+                    "example": 1
+                  },
+                  "autor": {
+                    "type": "string",
+                    "title": "nome do autor",
+                    "minLength": 3,
+                    "maxLength": 100
+                  },
+                  "titulo": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 100,
+                    "title": "titulo do livro",
+                    "example": "O senhor dos aneis"
+                  },
+                  "ano_pulblicacao": {
+                    "type": "integer",
+                    "example": 2001
+                  },
+                  "genero": {
+                    "type": "string",
+                    "enum": [
+                      "Romance",
+                      "Ficção Científica",
+                      "Fantasia",
+                      "Mistério",
+                      "Suspense",
+                      "Terror",
+                      "Aventura",
+                      "Drama",
+                      "Histórico",
+                      "Biografia",
+                      "Autobiografia",
+                      "Poesia",
+                      "Humor",
+                      "Literatura Clássica",
+                      "Literatura Contemporânea",
+                      "Infantojuvenil",
+                      "Young Adult (YA)",
+                      "Distopia",
+                      "Realismo Mágico",
+                      "Crônicas",
+                      "Ensaios",
+                      "Autoajuda",
+                      "Espiritualidade",
+                      "Religião",
+                      "Filosofia",
+                      "Psicologia",
+                      "Ciências Sociais",
+                      "Política",
+                      "Economia",
+                      "Educação",
+                      "Tecnologia",
+                      "Negócios",
+                      "Direito",
+                      "Medicina",
+                      "Ecologia",
+                      "Viagens",
+                      "Gastronomia",
+                      "Arte",
+                      "Fotografia"
+                    ],
+                    "title": "Genero do livro",
+                    "example": "romance"
+                  },
+                  "preco": {
+                    "type": "number",
+                    "format": "float",
+                    "minimum": 0.1,
+                    "title": "Preço do livro",
+                    "example": 5.5
+                  }
+                },
+                "required": [
+                  "id",
+                  "autor",
+                  "titulo",
+                  "ano_pulblicacao",
+                  "genero",
+                  "preco"
+                ]
+              },
+              "example": {
+                "id": 1,
+                "autor": "incididu",
+                "titulo": "O senhor dos aneis",
+                "ano_pulblicacao": 2001,
+                "genero": "romance",
+                "preco": 5.5
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "",
+                  "type": "object",
+                  "properties": {
+                    "msg": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "msg"
+                  ]
+                }
+              }
+            },
+            "headers": {}
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "title": "id do livro",
+                      "example": 1
+                    },
+                    "autor": {
+                      "type": "string",
+                      "title": "nome do autor",
+                      "minLength": 3,
+                      "maxLength": 100
+                    },
+                    "titulo": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 100,
+                      "title": "titulo do livro",
+                      "example": "O senhor dos aneis"
+                    },
+                    "ano_pulblicacao": {
+                      "type": "integer",
+                      "example": 2001
+                    },
+                    "genero": {
+                      "type": "string",
+                      "enum": [
+                        "Romance",
+                        "Ficção Científica",
+                        "Fantasia",
+                        "Mistério",
+                        "Suspense",
+                        "Terror",
+                        "Aventura",
+                        "Drama",
+                        "Histórico",
+                        "Biografia",
+                        "Autobiografia",
+                        "Poesia",
+                        "Humor",
+                        "Literatura Clássica",
+                        "Literatura Contemporânea",
+                        "Infantojuvenil",
+                        "Young Adult (YA)",
+                        "Distopia",
+                        "Realismo Mágico",
+                        "Crônicas",
+                        "Ensaios",
+                        "Autoajuda",
+                        "Espiritualidade",
+                        "Religião",
+                        "Filosofia",
+                        "Psicologia",
+                        "Ciências Sociais",
+                        "Política",
+                        "Economia",
+                        "Educação",
+                        "Tecnologia",
+                        "Negócios",
+                        "Direito",
+                        "Medicina",
+                        "Ecologia",
+                        "Viagens",
+                        "Gastronomia",
+                        "Arte",
+                        "Fotografia"
+                      ],
+                      "title": "Genero do livro",
+                      "example": "romance"
+                    },
+                    "preco": {
+                      "type": "number",
+                      "format": "float",
+                      "minimum": 0.1,
+                      "title": "Preço do livro",
+                      "example": 5.5
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "autor",
+                    "titulo",
+                    "ano_pulblicacao",
+                    "genero",
+                    "preco"
+                  ]
+                },
+                "example": {
+                  "id": 1,
+                  "autor": "proident culpa ea",
+                  "titulo": "O senhor dos aneis",
+                  "ano_pulblicacao": 2001,
+                  "genero": "romance",
+                  "preco": 5.5
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "security": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "livro": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "id do livro",
+            "example": 1
+          },
+          "autor": {
+            "type": "string",
+            "title": "nome do autor",
+            "minLength": 3,
+            "maxLength": 100
+          },
+          "titulo": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 100,
+            "title": "titulo do livro",
+            "example": "O senhor dos aneis"
+          },
+          "ano_pulblicacao": {
+            "type": "integer",
+            "example": 2001
+          },
+          "genero": {
+            "type": "string",
+            "enum": [
+              "Romance",
+              "Ficção Científica",
+              "Fantasia",
+              "Mistério",
+              "Suspense",
+              "Terror",
+              "Aventura",
+              "Drama",
+              "Histórico",
+              "Biografia",
+              "Autobiografia",
+              "Poesia",
+              "Humor",
+              "Literatura Clássica",
+              "Literatura Contemporânea",
+              "Infantojuvenil",
+              "Young Adult (YA)",
+              "Distopia",
+              "Realismo Mágico",
+              "Crônicas",
+              "Ensaios",
+              "Autoajuda",
+              "Espiritualidade",
+              "Religião",
+              "Filosofia",
+              "Psicologia",
+              "Ciências Sociais",
+              "Política",
+              "Economia",
+              "Educação",
+              "Tecnologia",
+              "Negócios",
+              "Direito",
+              "Medicina",
+              "Ecologia",
+              "Viagens",
+              "Gastronomia",
+              "Arte",
+              "Fotografia"
+            ],
+            "title": "Genero do livro",
+            "example": "romance"
+          },
+          "preco": {
+            "type": "number",
+            "format": "float",
+            "minimum": 0.1,
+            "title": "Preço do livro",
+            "example": 5.5
+          }
+        },
+        "required": [
+          "id",
+          "autor",
+          "ano_pulblicacao",
+          "titulo",
+          "genero",
+          "preco"
+        ]
+      }
+    },
+    "securitySchemes": {}
+  },
+  "servers": [],
+  "security": []
+}
